@@ -18,7 +18,7 @@ float roll_offset = 0.0;
 
 const int CALIBRATION_SAMPLES = 500; // for more accuracy increase the number of trials.
 
-float gyroPitchRate, gryoRollRate, accelPitch, accelRoll;
+float gyroPitchRate, gyroRollRate, accelPitch, accelRoll;
 
 float gyroPitch, gyroRoll;
 
@@ -75,8 +75,8 @@ void calibrateGyro() {
 	pitch_offset = pitchSum / CALIBRATION_SAMPLES;
 	roll_offset = rollSum / CALIBRATION_SAMPLES;
 
-	Serial.print("Pitch offset: "); Serial.println(pitchOffset);
-  	Serial.print("Roll offset:  "); Serial.println(rollOffset);
+	Serial.print("Pitch offset: "); Serial.println(pitch_offset);
+  	Serial.print("Roll offset:  "); Serial.println(roll_offset);
   	Serial.println("Calibration complete!");
 }
 
